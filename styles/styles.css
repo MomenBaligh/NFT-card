@@ -1,0 +1,166 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: hsl(217, 54%, 11%);
+  font-size: 18px;
+  font-family: 'Outfit', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  background-color: hsl(216, 50%, 16%);
+  border-radius: 20px;
+  padding: 25px;
+}
+
+.image-container {
+  position: relative;
+  width: fit-content;
+}
+.icon,
+.image {
+  height: 300px;
+  width: 300px;
+  border-radius: 0.6em;
+  margin: 0 auto;
+}
+.icon {
+  position: absolute;
+  background-color: hsl(178, 100%, 50%);
+  top: 0;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.icon:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+.icon img:hover {
+  opacity: 1;
+}
+.icon img {
+  position: absolute;
+  top: 43.5%;
+  left: 43.5%;
+}
+
+.info-container {
+  margin: 0 auto;
+}
+.info-container h3 {
+  color: white;
+  margin-bottom: 20px;
+  font-size: 22px;
+}
+.info-container p {
+  color: hsl(215, 51%, 70%);
+  opacity: 0.8;
+  inline-size: 300px;
+  line-height: 25px;
+}
+
+.market-data,
+.creator {
+  display: flex;
+  justify-content: space-between;
+  width: 17em;
+  margin: 0 auto;
+}
+.price {
+  color: hsl(178, 100%, 50%);
+  font-weight: bold;
+  font-size: 15px;
+}
+.market-data img {
+  margin-right: 0.5rem;
+}
+.timer {
+  color: hsl(215, 51%, 70%);
+  opacity: 0.8;
+  font-size: 16px;
+}
+
+hr {
+  opacity: 0.3;
+  margin: 0 5px;
+}
+
+.creator {
+  color: white;
+  font-weight: 300;
+}
+.avatar {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+.creator div {
+  font-size: 16px;
+  display: inline-block;
+  text-align: left;
+  gap: 0.3em;
+  margin-right: 80px;
+  margin-top: 5px;
+}
+.creator div span {
+  color: hsl(215, 51%, 70%);
+  opacity: 0.8;
+}
+#name {
+  color: hsl(0, 0%, 100%);
+}
+
+.info-container h3:hover,
+#name:hover {
+  color: hsl(178, 100%, 50%);
+  cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+  * {
+    font-size: 16px;
+    border-radius: 10%;
+  }
+  .card {
+    padding: 1.5em;
+  }
+
+  .image,
+  .icon {
+    height: 280px;
+    width: 280px;
+  }
+
+  .info-container {
+    width: 15em;
+    margin: 0;
+  }
+  .info-container h3 {
+    margin-bottom: 10px;
+  }
+  .info-container p {
+    font-size: 16px;
+    line-height: 25px;
+  }
+
+  .market-data,
+  .creator {
+    width: 15em;
+    margin: 0;
+  }
+
+  .creator div {
+    gap: 0.5em;
+    font-size: 12px;
+    margin: 0 20px 0 0;
+  }
+}
